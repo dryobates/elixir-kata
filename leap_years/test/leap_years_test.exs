@@ -21,4 +21,8 @@ defmodule LeapYearsTest do
   test "raises not gregorian year before 1583" do
     assert_raise NotGregorianYear, fn -> LeapYears.is_leap(1500) end
   end
+
+  test "converts to int when float" do
+    assert LeapYears.is_leap(2004.0) == true
+  end
 end
