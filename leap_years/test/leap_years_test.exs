@@ -2,7 +2,7 @@ defmodule LeapYearsTest do
   use ExUnit.Case
   doctest LeapYears
 
-  test "greets the world" do
-    assert LeapYears.hello() == :world
+  test "is not leap when not divisible by 4" do
+    assert LeapYears.is_leap(2001) == false
   end
 end
