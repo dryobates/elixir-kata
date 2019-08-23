@@ -25,4 +25,8 @@ defmodule LeapYearsTest do
   test "converts to int when float" do
     assert LeapYears.is_leap(2004.0) == true
   end
+
+  test "converts to int when string" do
+    assert LeapYears.is_leap("2004") == true
+  end
 end
