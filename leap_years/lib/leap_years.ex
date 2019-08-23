@@ -1,8 +1,7 @@
 defmodule LeapYears do
   @first_gregorian_year 1583
   def is_leap(year) do
-    year = to_int(year)
-    year = round(year)
+    year = round(to_int(year))
     if year < @first_gregorian_year do
       raise NotGregorianYear
     end
