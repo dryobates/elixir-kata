@@ -1,13 +1,9 @@
 defmodule LeapYears do
   def is_leap(year) do
-    if rem(year, 100) == 0 do
-      false
-    else
-      if rem(year, 4) == 0 do
-        true
-      else
-        false
-      end
+    cond do
+      rem(year, 100) == 0 -> false
+      rem(year, 4) == 0 -> true
+      true -> false
     end
   end
 end
