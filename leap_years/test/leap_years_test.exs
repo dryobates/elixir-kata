@@ -17,4 +17,8 @@ defmodule LeapYearsTest do
   test "is leap when divisible by 400" do
     assert LeapYears.is_leap(2000) == true
   end
+
+  test "raises not gregorian year before 1583" do
+    assert_raise NotGregorianYear, fn -> LeapYears.is_leap(1500) end
+  end
 end
