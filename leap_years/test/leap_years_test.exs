@@ -13,4 +13,8 @@ defmodule LeapYearsTest do
   test "is not leap when divisible by 100" do
     assert LeapYears.is_leap(1900) == false
   end
+
+  test "is leap when divisible by 400" do
+    assert LeapYears.is_leap(2000) == true
+  end
 end
